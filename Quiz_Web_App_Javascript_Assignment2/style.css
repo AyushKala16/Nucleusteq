@@ -67,8 +67,6 @@ body {
 .Quiz-heading{
     margin: 50px;
     font-size: 50px;
-    /* border-radius: 2px; */
-    /* box-sizing: border-box; */
 }
 
 .name-block{
@@ -143,7 +141,6 @@ body {
     padding: 10px;
     border-radius: 10px;
     font-size: 25px;
-    /* margin-top: 50px; */
 }
 .time{
     display: flex;
@@ -157,7 +154,6 @@ body {
     font-size: 30px;
     border-radius: 10px;
     box-shadow: inset;
-    /* background: rgb(59, 219, 59); */
 }
 #restart-btn:hover{
     transform: scale(1.03);

@@ -95,9 +95,6 @@ function showCorrectAnswer() {
         if (button.textContent === questions[currentQuestionIndex].correct_answer) {
             button.classList.add("correct");
         } 
-        // else {
-        //     button.classList.add("wrong");
-        // }
     });
 
     setTimeout(() => {
