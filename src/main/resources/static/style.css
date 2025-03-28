@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #222;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.spForm {
+	flex-direction: column;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Delete Button */
+form button[type="submit"] {
+    background-color: #dc3545;
+}
+
+form button[type="submit"]:hover {
+    background-color: #c82333;
+}
+
+/* Edit Button */
+td form:nth-child(2) button {
+    background-color: #ffc107;
+    color: black;
+}
+
+td form:nth-child(2) button:hover {
+    background-color: #e0a800;
+}
+

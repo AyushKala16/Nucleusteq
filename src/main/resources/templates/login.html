@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Portal - Login</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+    <h1>HR Portal Login</h1>
+	
+	<!-- Login Form -->
+    <form action="#" th:action="@{/hr/login}" method="post" class="spForm">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <p th:if="${error}" style="color: red;" th:text="${error}"></p>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+    <h1>Employee List</h1>
+
+    <!-- Employee Table -->
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>Action</th>
+			<th>Edit</th>
+        </tr>
+        <tr th:each="employee : ${employees}">
+            <td th:text="${employee.id}"></td>
+            <td th:text="${employee.name}"></td>
+            <td th:text="${employee.department}"></td>
+            <td th:text="${employee.email}"></td>
+            <td th:text="${employee.salary}"></td>
+            <td>
+                <!-- Delete button -->
+                <form th:action="@{/employees/delete}" method="post">
+                    <input type="hidden" name="id" th:value="${employee.id}">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+			<td>
+			 	<!-- Edit button -->
+				<form th:action="@{/employees/update}" th:object="${employee}" method="post">
+			    	<input type="hidden" name="id" th:value="${employee.id}">
+					<input type="hidden" name="name" th:value="${employee.name}">
+					<input type="hidden" name="department" th:value="${employee.department}">
+					<input type="hidden" name="email" th:value="${employee.email}">
+					<input type="hidden" name="salary" th:value="${employee.salary}">
+			        <button type="submit">Edit</button>
+			    </form>
+			 </td>
+        </tr>
+    </table>
+
+    <!-- Add Employee Form -->
+    <h2>Add New Employee</h2>
+    <form th:action="@{/employees/add}" method="post" class="spForm">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="department" placeholder="Department" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="number" name="salary" placeholder="Salary" required>
+        <button type="submit">Add Employee</button>
+    </form>
+
+</body>
+</html>
