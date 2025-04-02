@@ -1,0 +1,51 @@
+/* UpdateStudent.css */
+.update-student-container {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.update-student-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.update-student-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.update-student-form label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.update-student-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.update-student-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.update-student-form button:hover {
+    background-color: #0056b3;
+}
