@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Button, Container, Paper, Typography } from '@mui/material';
+import { TextField, Button, Container, Paper, Typography, FormControl,InputLabel,MenuItem,Select} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { register } from '../services/api';
 
@@ -15,7 +15,7 @@ const Register = () => {
     email: '',
     password: '',
     branch: '',
-    status: "pending"
+    status: "PENDING"
   });
   const navigate = useNavigate();
 
@@ -93,14 +93,24 @@ const Register = () => {
             value={userData.address}
             onChange={(e) => setUserData({ ...userData, address: e.target.value })}
           />
-          <TextField
-            fullWidth
-            label="Branch"
-            margin="normal"
-            required
-            value={userData.branch}
-            onChange={(e) => setUserData({ ...userData, branch: e.target.value })}
-          />
+          {/* Dropdown for Branch */}
+          <FormControl fullWidth margin="normal" required>
+            <InputLabel id="branch-label">Branch</InputLabel>
+            <Select
+              labelId="branch-label"
+              value={userData.branch}
+              label="Branch"
+              onChange={(e) => setUserData({ ...userData, branch: e.target.value })}
+            >
+              <MenuItem value="Computer Engineering">Computer Engineering</MenuItem>
+              <MenuItem value="Information Technology">Information Technology</MenuItem>
+              <MenuItem value="Electronics Engineering">Electronics Engineering</MenuItem>
+              <MenuItem value="Mechanical Engineering">Mechanical Engineering</MenuItem>
+              <MenuItem value="Civil Engineering">Civil Engineering</MenuItem>
+              <MenuItem value="Instrumentation Engineering">Instrumentation Engineering</MenuItem>
+              <MenuItem value="AI & Data Science">AI & Data Science</MenuItem>
+            </Select>
+          </FormControl>
           <TextField
             fullWidth
             label="Email"

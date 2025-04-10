@@ -29,6 +29,7 @@ function App() {
           <Route
             path="/student"
             element={
+              // Protected route gives role based access
               <ProtectedRoute roles={['STUDENT']}>
                 <StudentDashboard />
                 

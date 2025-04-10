@@ -24,7 +24,7 @@ const StudentDashboard = () => {
       const response = await getApplications();
       
       // Filter only pending applications
-      const pendingApplications = response.data.filter(app => app.status === "pending");
+      const pendingApplications = response.data.filter(app => app.status.toLowerCase() === "pending");
   
       // Sort by rank (assuming lower rank is better)
       pendingApplications.sort((a, b) => a.rank - b.rank);

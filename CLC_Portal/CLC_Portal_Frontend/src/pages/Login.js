@@ -12,12 +12,11 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log(credentials);
       const response = await login(credentials);
-      console.log(response);
       authLogin(response);
       navigate('/'+response.data.role.toLowerCase());
     } catch (error) {
+      alert('Login Faild');
       navigate('/register');
       console.error('Login failed:', error);
     }

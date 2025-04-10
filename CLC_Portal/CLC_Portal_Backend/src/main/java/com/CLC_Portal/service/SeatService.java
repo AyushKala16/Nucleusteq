@@ -1,4 +1,4 @@
-package com.CLC_Portal.service;
+ package com.CLC_Portal.service;
 
 import com.CLC_Portal.model.Seat;
 import com.CLC_Portal.repository.SeatRepository;

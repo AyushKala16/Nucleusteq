@@ -57,7 +57,6 @@ const OfficerSeatSettings = () => {
                                     type="number" 
                                     value={inputValues[index]} 
                                     onChange={(e) => handleInputChange(index, e.target.value)} 
-                                    min="0"
                                 />
                             </td>
                             <td>
